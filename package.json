@@ -11,6 +11,7 @@
   "author": "Bruno Fukumori",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcryptjs": "2.4.4",
     "@types/node": "20.6.5",
     "@typescript-eslint/eslint-plugin": "6.7.2",
     "@typescript-eslint/parser": "6.7.2",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@prisma/client": "5.3.1",
+    "bcryptjs": "2.4.3",
     "dotenv": "16.3.1",
     "fastify": "4.23.2",
     "zod": "3.22.2"
