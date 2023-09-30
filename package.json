@@ -8,7 +8,9 @@
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "author": "Bruno Fukumori",
   "license": "ISC",
@@ -17,6 +19,8 @@
     "@types/node": "20.6.5",
     "@typescript-eslint/eslint-plugin": "6.7.2",
     "@typescript-eslint/parser": "6.7.2",
+    "@vitest/coverage-v8": "0.34.6",
+    "@vitest/ui": "0.34.6",
     "eslint": "8.50.0",
     "prisma": "5.3.1",
     "tsup": "7.2.0",

@@ -35,9 +35,9 @@ describe('Register use case', () => {
 
     await registerUseCase.execute(requestBody);
 
-    expect(() => registerUseCase.execute(requestBody)).rejects.toBeInstanceOf(
-      UserAlreadyExistsError
-    );
+    await expect(() =>
+      registerUseCase.execute(requestBody)
+    ).rejects.toBeInstanceOf(UserAlreadyExistsError);
   });
 
   it('Should be able to register', async () => {
