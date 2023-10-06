@@ -1,20 +1,20 @@
 import { ResourceNotFoundError } from './errors/resource-not-found-error';
 import { ICheckInsRepository } from '@/repositories/check-ins-repository';
 
-interface FetchUserMetricsUseCaseRequest {
+interface GetUserMetricsUseCaseRequest {
   userId: string;
 }
 
-interface FetchUserMetricsUseCaseResponse {
+interface GetUserMetricsUseCaseResponse {
   checkInsCount: number;
 }
 
-export class FetchUserMetricsUseCase {
+export class GetUserMetricsUseCase {
   constructor(private checkInsRepository: ICheckInsRepository) {}
 
   async execute({
     userId,
-  }: FetchUserMetricsUseCaseRequest): Promise<FetchUserMetricsUseCaseResponse> {
+  }: GetUserMetricsUseCaseRequest): Promise<GetUserMetricsUseCaseResponse> {
     const checkInsCount = await this.checkInsRepository.checkInCountByUserId(
       userId
     );
