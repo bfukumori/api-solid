@@ -1,0 +1,8 @@
+{
+  "name": "vitest-environment-prisma",
+  "version": "1.0.0",
+  "description": "E2E environment for prisma",
+  "main": "prisma-test-environment.ts",
+  "author": "Bruno Fukumori",
+  "license": "ISC"
+}
