@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 export async function create(request: FastifyRequest, reply: FastifyReply) {
   const createCheckInParamsSchema = z.object({
-    gymId: z.string().uuid(),
+    gymId: z.string().cuid(),
   });
   const createCheckInBodySchema = z.object({
     latitude: z.number().refine((value) => {

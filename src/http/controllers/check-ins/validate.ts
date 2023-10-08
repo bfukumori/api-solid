@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 export async function validate(request: FastifyRequest, reply: FastifyReply) {
   const createCheckInParamsSchema = z.object({
-    checkInId: z.string().uuid(),
+    checkInId: z.string().cuid(),
   });
 
   const { checkInId } = createCheckInParamsSchema.parse(request.params);
